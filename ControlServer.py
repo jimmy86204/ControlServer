@@ -16,8 +16,6 @@ class myHandler(BaseHTTPRequestHandler):
 
         cmd = "/var/lib/docker/volumes/jenkins_volume_jenkins_data/_data/workspace/hanshin-amc/main.sh"
         p = subprocess.Popen(cmd, stdout=subprocess.PIPE, shell=True)
-        p_status = p.wait()
-        (output, err) = p.communicate()
 
         # self.wfile.write(cmd + "\n")
         return
